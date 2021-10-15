@@ -11,7 +11,7 @@ export const messages = {
   routingTitle: () =>
     _t(
       translations.routingFeature.title,
-      'Industry-standard Routing', // you can set the default value when extracting
+      'Industry-standard Routing' // you can set the default value when extracting
     ),
   routingDescription: () => _t(translations.routingFeature.description),
   feedbackTitle: () => _t(translations.feedbackFeature.title),

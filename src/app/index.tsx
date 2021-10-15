@@ -10,6 +10,8 @@ import * as React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
 
+import { ResetStyle } from '../styles/reset';
+import { FontStyle } from '../styles/typography';
 import { GlobalStyle } from '../styles/global-styles';
 
 import { HomePage } from './pages/HomePage';
@@ -32,6 +34,8 @@ export function App() {
         <Route exact path={process.env.PUBLIC_URL + '/'} component={HomePage} />
         <Route component={NotFoundPage} />
       </Switch>
+      <ResetStyle />
+      <FontStyle />
       <GlobalStyle />
     </BrowserRouter>
   );

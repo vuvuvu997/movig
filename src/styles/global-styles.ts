@@ -1,36 +1,58 @@
 import { createGlobalStyle } from 'styled-components';
-import { StyleConstants } from './StyleConstants';
 /* istanbul ignore next */
 export const GlobalStyle = createGlobalStyle`
-  html,
+  * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing:border-box;
+  }
+  h5, h4, h3, h2, h1 {
+    font-family: "Libre Caslon Text";
+  }
+  ::selection {
+    background: #D2D9E2;
+    color: #204370;
+  }
+  ::-moz-selection {
+    background: #D2D9E2;
+    color: #204370;
+  }
+  ::-webkit-selection {
+    background: #D2D9E2;
+    color: #204370;
+  }
+  a{
+    text-decoration: none;
+    line-height:inherit;
+    font-size:inherit;
+    color:inherit;
+    display:inline-block;
+  }
+  /*
+  * Globals
+  */
   body {
-    height: 100%;
-    width: 100%;
-    line-height: 1.5;
+    color: #161637;
+    font-family: 'Libre Franklin';
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+  }
+  @media (max-width: 650px) {
+    .react-reveal {
+      opacity: 1 !important; 
+    }
   }
 
-  body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    padding-top: ${StyleConstants.NAV_BAR_HEIGHT};
-    background-color: ${p => p.theme.background};
-  }
 
-  body.fontLoaded {
-    font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  strong {
+    font-weight: bold;
   }
-  
-  p,
-  label {
-    line-height: 1.5em;
+  em {
+    font-style: italic;
   }
-
-  input, select, button {
-    font-family: inherit;
-    font-size: inherit;
-  }
-
-  .icon {
-    width: 1.5rem;
-    height: 1.5rem;
+  img {
+    width:100%;
+    height:100%;
+    object-fit:contain;
   }
 `;

@@ -51,7 +51,7 @@ ReactDOM.render(
       </HelmetProvider>
     </ThemeProvider>
   </Provider>,
-  MOUNT_NODE,
+  MOUNT_NODE
 );
 
 // Hot reloadable translation json files

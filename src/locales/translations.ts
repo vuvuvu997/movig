@@ -17,16 +17,16 @@ export const translations: ConvertedToObjectType<TranslationJsonType> =
 export const convertLanguageJsonToObject = (
   json: any,
   objToConvertTo = translations,
-  current?: string,
+  current?: string
 ) => {
-  Object.keys(json).forEach(key => {
+  Object.keys(json).forEach((key) => {
     const currentLookupKey = current ? `${current}.${key}` : key;
     if (typeof json[key] === 'object') {
       objToConvertTo[key] = {};
       convertLanguageJsonToObject(
         json[key],
         objToConvertTo[key],
-        currentLookupKey,
+        currentLookupKey
       );
     } else {
       objToConvertTo[key] = currentLookupKey;
